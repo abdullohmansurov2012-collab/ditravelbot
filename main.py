@@ -9,10 +9,6 @@ from handlers import router
 async def main():
     load_dotenv()
     
-    # PythonAnywhere bepul tarifi uchun proxy sozlamasi
-    from aiogram.client.session.aiohttp import AiohttpSession
-    session = AiohttpSession(proxy="http://proxy.server:3128")
-    
     bot = Bot(token=os.getenv("BOT_TOKEN"), session=session)
     dp = Dispatcher()
     dp.include_router(router)
