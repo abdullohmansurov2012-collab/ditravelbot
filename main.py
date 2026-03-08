@@ -9,7 +9,7 @@ from handlers import router
 async def main():
     load_dotenv()
     
-    bot = Bot(token=os.getenv("BOT_TOKEN"), session=session)
+    bot = Bot(token=os.getenv("BOT_TOKEN"))
     dp = Dispatcher()
     dp.include_router(router)
 
